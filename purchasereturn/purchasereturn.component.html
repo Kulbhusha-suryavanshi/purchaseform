@@ -1,0 +1,262 @@
+<nav class="navbar navbar-light bg-light m-2">
+    <h1 class="h2 ps-1 page-title"><strong>Purchase Return</strong></h1>
+  </nav>
+  <main class="content">
+    <div class="row p-3 bg-white">
+      <form [formGroup]="businessdata" (ngSubmit)="save(businessdata.value)">
+        <div class="row g-3">
+          <input type="text" hidden readonly formControlName="id" [(ngModel)]="businessid">
+          <div class="col-md-3">
+            <label class="form-label">Voucher Date<span class="text-danger">*</span><span *ngIf="businessdata.controls.regdate.touched && businessdata.controls.regdate.invalid" class="text-danger small">Please Select Date</span></label>
+            <div class="input-group">
+              <input class="form-control mat-datepicker" readonly matInput [matDatepicker]="picker"
+                placeholder="dd/mm/yyyy" formControlName="vdate">
+              <div class="input-group-append">
+                <mat-datepicker-toggle class="mat-datepicker-icon" matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <label class="form-label">Supplier<span class="text-danger">*</span><span *ngIf="businessdata.controls.villageid.touched && businessdata.controls.villageid.invalid" class="text-danger small">Please Select Village</span></label>
+            <select class="form-select" formControlName="supplier">
+              <option selected value="0">Select</option>
+            </select>
+          </div>
+          <div class="col-md-5">
+            <label class="form-label">Purchase Invoice<span class="text-danger">*</span><span *ngIf="businessdata.controls.villageid.touched && businessdata.controls.villageid.invalid" class="text-danger small">Please Select Village</span></label>
+            <select class="form-select" formControlName="pinvoice">
+              <option selected value="0">Select</option>
+            </select>
+          </div>
+
+          <div class="col-md-12">
+            <table class="table border table-striped  table-hover ml-5">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th class="border">Product</th>
+                  <th class="border">Lot/Batch No</th>
+                  <th class="border">Mfg Date</th>
+                  <th class="border">Exp Date</th>
+                  <th class="border">Rate (Without GST)</th>
+                  <th class="border">Return Quantity</th>
+                  <th class="border">Disc. %</th>
+                  <th class="border">Disc.Amount</th>
+
+
+                </tr>
+              </thead>
+              <tbody>
+              <tr>
+              
+               <td class="border"><td class="border">
+                <select class="form-select" formControlName="villageid" >
+                  <option selected value="0">Select</option>
+                </select></td>
+                <td class="border"></td>
+                <td class="border"></td>
+                <td class="border"></td>
+                <td class="border"></td>
+                <td class="border"><input class="p-1 m-1 border form-control bg-light text-end"  type="text"></td>
+                <td class="border"></td>
+                <td class="border"></td>
+              </tr>
+              <tr>
+                 <td class="border"><td class="border">
+                  <select class="form-select" formControlName="villageid">
+                    <option selected value="0">Select</option>
+                  </select></td>
+                  <td class="border"></td>
+                  <td class="border"></td>
+                  <td class="border"></td>
+                  <td class="border"></td>
+                  <td class="border"><input class="p-1 m-1 border form-control bg-light text-end" type="text"></td>
+                  <td class="border"></td>
+                  <td class="border"></td>
+              </tr>
+              <tr>
+                 <td class="border"><td class="border">
+                  <select class="form-select" formControlName="villageid">
+                    <option selected value="0">Select</option>
+                  </select></td>
+                  <td class="border"></td>
+                  <td class="border"></td>
+                  <td class="border"></td>
+                  <td class="border"></td>
+                  <td class="border"><input class="p-1 m-1 border form-control bg-light text-end"   type="text"></td>
+                  <td class="border"></td>
+                  <td class="border"></td>
+              </tr>
+              <tr>
+                  <td class="border"><td class="border">
+                  <select class="form-select" formControlName="villageid">
+                    <option selected value="0">Select</option>
+                  </select></td>
+                  <td class="border"></td>
+                  <td class="border"></td>
+                  <td class="border"></td>
+                  <td class="border"></td>
+                  <td class="border"><input class="p-1 m-1 border form-control bg-light text-end"  type="text"></td>
+                  <td class="border"></td>
+                  <td class="border"></td>
+
+              </tr>
+              <tr>
+                <td class="border"><td class="border">
+                  <select class="form-select" formControlName="villageid">
+                    <option selected value="0">Select</option>
+                  </select></td>
+                  <td class="border"></td>
+                  <td class="border"></td>
+                    <td class="border"></td>
+                <td class="border"></td>
+                <td class="border"><input class="p-1 m-1 border form-control bg-light text-end"  type="text"></td>
+                <td class="border"></td>
+                <td class="border"></td>
+              </tr>
+              <tr>
+                <td class="border"><td class="border">
+                  <select class="form-select" formControlName="villageid" >
+                    <option  value="Select" selected >Select</option>
+                    <option  value="Demo" >Demo</option>
+
+                  </select></td>
+                <td class="border"></td>
+                <td class="border"></td>
+                <td class="border"></td>
+                <td class="border"></td>
+                <td class="border"><input class="p-1 m-1 border form-control bg-light text-end "   type="text"></td>
+                <td class="border"></td>
+                <td class="border"></td>
+              </tr>
+              <tr>
+              
+                <td class="border"><td class="border">
+                 <select class="form-select" formControlName="villageid" >
+                   <option selected value="0">Select</option>
+                 </select></td>
+                 <td class="border"></td>
+                 <td class="border"></td>
+                 <td class="border"></td>
+                 <td class="border"></td>
+                 <td class="border"><input class="p-1 m-1 border form-control bg-light text-end"   type="text"></td>
+                 <td class="border"></td>
+                 <td class="border"></td>
+               </tr>
+               <tr>
+              
+                <td class="border"><td class="border">
+                 <select class="form-select" formControlName="villageid" >
+                   <option selected value="Select" selecetd>Select</option>
+                 </select></td>
+                 <td class="border"></td>
+                 <td class="border"></td>
+                 <td class="border"></td>
+                 <td class="border"></td>
+                 <td class="border"><input class="p-1 m-1 border form-control bg-light text-end"   type="text"></td>
+                 <td class="border"></td>
+                 <td class="border"></td>
+               </tr>
+               <tr>
+              
+                <td class="border"><td class="border">
+                 <select class="form-select" formControlName="villageid" >
+                   <option selected value="0">Select</option>
+                 </select></td>
+                 <td class="border"></td>
+                 <td class="border"></td>
+                 <td class="border"></td>
+                 <td class="border"></td>
+                 <td class="border"><input class="p-1 m-1 border form-control bg-light text-end"   type="text"></td>
+                 <td class="border"></td>
+                 <td class="border"></td>
+               </tr>
+              </tbody>
+
+            </table>
+          </div>
+
+          <div class="col-md-6">
+            <table class="table border table-striped  table-hover ml-5">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th class="border">GST Percent</th>
+                  <th class="border">Amount</th>
+                </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td class="border">Discount</td>
+                <td class="border"><input class="p-1 m-1 border form-control bg-light text-end" value="18.00"  type="text"></td>
+                <td class="border"><input class="p-1 m-1 border form-control bg-light text-end" value="0.00" type="text"></td>
+              </tr>
+              <tr>
+                <td class="border">TCS</td>
+                <td class="border"><input class="p-1 m-1 border form-control bg-light text-end" value="0.00" type="text"> </td>
+                <td class="border"><input class="p-1 m-1 border form-control bg-light text-end" value="0.00" type="text"></td>
+              </tr>
+              <tr>
+                <td class="border">Transportation</td>
+                <td class="border"><input class="p-1 m-1 border form-control bg-light text-end" value="0.00" type="text"> </td>
+                <td class="border"><input class="p-1 m-1 border form-control bg-light text-end "  value="0.00" type="text"></td>
+              </tr>
+              </tbody>
+
+            </table>
+            <br><br><br>
+
+            <div class="col-md-12 fixed-absolute">
+              <button class="btn btn-primary" >Save</button>
+              <a class="btn btn-danger ms-2" routerLink="voucher/purchasereturn">Cancel</a>
+            </div>
+          </div>
+          
+          <div class="col-lg-6">
+            <table class="table border table-striped table-hover ml-5">
+              <tbody>
+                <tr>
+                  <td class="border">Total Taxable Amount</td>
+                  <td class="border text-end" >0.00</td>
+                </tr>
+                <tr>
+                  <td class="border">GST Amount</td>
+                  <td class="border text-end">0.00</td>
+                </tr>
+                <tr>
+                  <td class="border">SGST Amount</td>
+                  <td class="border text-end">0.00</td>
+                </tr>
+                <tr>
+                  <td class="border">IGST Amount</td>
+                  <td class="border text-end">0.00</td>
+                </tr>
+                <tr>
+                  <td class="border">
+                    <span class="mt-2">Round Off</span>
+                    <label class="switch ms-4 p-2">
+                      <input type="checkbox" checked>
+                      <span class="slider round"></span>
+                    </label></td>
+                  <td class="border">
+                    <input class="p-1 m-1 border form-control text-end bg-light" value="0.00" type="text">
+                  </td>
+                </tr>
+                <tr>
+                  <td class="border">Grand Total</td>
+                  <td class="border text-end">0.00</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+           </div>
+      </form>
+
+    </div>
+    <div class="row mt-2 p-3 bg-white">
+      <div class="col-md-12">
+             </div>
+    </div>
+  </main>
+  
